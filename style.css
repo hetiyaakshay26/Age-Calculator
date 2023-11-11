@@ -1,0 +1,158 @@
+:root {
+  --main-bg-color: #f0f0f0;
+  --secondary-text-color: #9b9b9b;
+  --primary-text-color: #151515;
+  --primary-fg-color: #864cff;
+  --input-color: #888888;
+  --error-color: #ee6166;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--main-bg-color);
+}
+.main {
+  width: 55%;
+  height: 80%;
+  background-color: #fff;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 300px;
+  padding: 50px 80px;
+}
+.top {
+  display: flex;
+  gap: 50px;
+  justify-content: start;
+  margin-bottom: 50px;
+}
+.input-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+input {
+  font-size: 1.5vw;
+  padding: 8px 15px;
+  width: 10vw;
+  font-weight: 700;
+  outline: none;
+  border-radius: 5px;
+  border: 0.5px solid var(--secondary-text-color);
+  color: var(--primary-text-color);
+}
+input:focus {
+  color: var(--primary-text-color);
+  border: 0.8px solid var(--primary-fg-color);
+}
+
+label {
+  font-size: 1.2vw;
+  font-weight: 500;
+  color: var(--secondary-text-color);
+}
+.error {
+  font-style: italic;
+  font-size: 0.85vw;
+  color: var(--error-color);
+  opacity: 0;
+}
+.error-state {
+  color: var(--error-color);
+}
+
+.line {
+  position: relative;
+}
+.arrow-btn {
+  height: 5vw;
+  width: 5vw;
+  padding: 20px;
+  position: absolute;
+  background-color: var(--primary-fg-color);
+  transform: translateY(-50%);
+  right: 0%;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.arrow-btn:hover {
+  background-color: var(--primary-text-color);
+}
+.bottom {
+  margin-top: 2vw;
+}
+.bottom > h1 {
+  font-size: 4.5vw;
+  font-style: italic;
+  font-weight: 900;
+}
+.bottom > h1 > span {
+  color: var(--primary-fg-color);
+  font-size: 4.5vw;
+}
+
+@media (max-width: 990px) {
+  .main {
+    padding: 30px 30px;
+  }
+  .top {
+    gap: 25px;
+  }
+  .arrow-btn {
+    width: 7vw;
+    height: 7vw;
+  }
+  input {
+    width: 7vw;
+    padding: 4px 7px;
+  }
+  .bottom > h1 {
+    font-size: 8vw;
+  }
+  .bottom > h1 > span {
+    font-size: 8vw;
+  }
+}
+@media (max-width: 700px) {
+  .main {
+    padding: 15px 15px;
+    width: 100%;
+    margin: 15px;
+  }
+  .top {
+    gap: 15px;
+  }
+  label {
+    font-size: 3vw;
+  }
+  input {
+    font-size: 3.5vw;
+    width: 20vw;
+    padding: 2px 4px;
+  }
+  .arrow-btn {
+    padding: 8px;
+    width: 12vw;
+    height: 12vw;
+  }
+  .bottom {
+    margin-top: 15vw;
+  }
+  .bottom > h1 {
+    font-size: 10vw;
+  }
+  .bottom > h1 > span {
+    font-size: 10vw;
+  }
+}
